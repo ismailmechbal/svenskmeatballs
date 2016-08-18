@@ -25,6 +25,9 @@
               label: 'Instruction',
               error: 'Instruction is mandatory, please specify one',
               input_html: {rows:  10, class: "materialize-textarea"} %>
+  <%= f.input :image_url,
+              label: "Image Link",
+              error: 'Image link is mandatory, please specify one' %>
 
   <%= f.submit "Save Recipe", "data-disable-with"=> "Just a moment...", class: "btn waves-effect waves-light" %>
 

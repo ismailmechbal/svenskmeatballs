@@ -5,6 +5,7 @@
 <%= recipe.prep_time %>
 <%= recipe.ingredient %>
 <%= recipe.instruction %>
+<%= recipe.image_url %>
 
 <%= link_to "Edit", edit_recipe_path(recipe.id) %>
 <%= link_to "Delete", recipe,  method: :delete, data: { confirm: 'Are you sure?' } %>
