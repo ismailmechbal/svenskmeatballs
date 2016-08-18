@@ -3,11 +3,29 @@
               label: "Recipe Name",
               error: 'Message is mandatory, please specify one',
               autofocus: true %>
+  <%= f.input :description,
+              as: :text,
+              label: 'Description',
+              error: 'Description is mandatory, please write one',
+              placeholder: 'Swedish meat ball seasoned with love ...',
+              input_html: {rows:  2, class: "materialize-textarea"} %>
+  <%= f.input :cook_time,
+              label: "Cooking Time",
+              error: 'Cooking Time is mandatory, please specify one' %>
+  <%= f.input :prep_time,
+              label: "Preparation Time",
+              error: 'Preparation Time is mandatory, please specify one' %>
   <%= f.input :ingredient,
               as: :text,
-              label: 'Message',
-              error: 'Message is mandatory, please specify one',
-              placeholder: 'I am proud of myself because ...',
+              label: 'Ingredient',
+              error: 'Ingredient are mandatory otherwise no food tonight!',
               input_html: {rows:  10, class: "materialize-textarea"} %>
+  <%= f.input :instruction,
+              as: :text,
+              label: 'Instruction',
+              error: 'Instruction is mandatory, please specify one',
+              input_html: {rows:  10, class: "materialize-textarea"} %>
+
   <%= f.submit "Save Recipe", "data-disable-with"=> "Just a moment...", class: "btn waves-effect waves-light" %>
+
 <% end %>
