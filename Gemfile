@@ -16,7 +16,7 @@ gem 'turbolinks', '~> 5'
 gem 'acts-as-taggable-on', '~> 4.0'
 gem 'annotate'
 gem 'devise'
-
+gem 'simple_form'
 
 group :development, :test do
   gem 'byebug', platform: :mri
