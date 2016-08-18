@@ -14,7 +14,7 @@ gem 'turbolinks', '~> 5'
 # Custom
 gem 'annotate'
 gem 'devise'
-gem 'friendly_id', '~> 5.1.0' # Need to install {https://github.com/norman/friendly_id}
+gem 'friendly_id', '~> 5.1.0'
 gem 'simple_form'
 
 group :development, :test do

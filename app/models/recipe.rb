@@ -12,9 +12,16 @@
 #  image_url   :text             not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  slug        :string
+#
+# Indexes
+#
+#  index_recipes_on_slug  (slug) UNIQUE
 #
 
 class Recipe < ApplicationRecord
+  extend FriendlyId
+  friendly_id :name, use: :slugged
   after_commit :flush_cache
   validates :name, :description, :cook_time, :prep_time, :ingredient, :instruction, :image_url, presence: true
 

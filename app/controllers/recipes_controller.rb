@@ -47,12 +47,12 @@ class RecipesController < ApplicationController
   private
 
   def set_recipe
-    @recipe = Recipe.find(params[:id])
+    @recipe = Recipe.friendly.find(params[:id])
     expire_fragment(@recipe)
   end
 
   def recipe_params
-    params.require(:recipe).permit(:name, :ingredient, :description, :cook_time, :prep_time, :instruction, :image_url)
+    params.require(:recipe).permit(:name, :ingredient, :description, :cook_time, :prep_time, :instruction, :image_url, :slug)
   end
 
 end
