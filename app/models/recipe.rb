@@ -9,7 +9,7 @@
 #  prep_time   :string           not null
 #  ingredient  :text             not null
 #  instruction :text             not null
-#  image_url   :text             not null
+#  image_url   :string           not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  slug        :string
