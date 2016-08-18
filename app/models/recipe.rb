@@ -15,5 +15,18 @@
 #
 
 class Recipe < ApplicationRecord
-  validates :name, :cook_time, :prep_time, :ingredient, :image_url, presence: true
+  after_commit :flush_cache
+  validates :name, :description, :cook_time, :prep_time, :ingredient, :instruction, :image_url, presence: true
+
+  class << self
+    def all_cached
+      Rails.cache.fetch("recipes") { Recipe.all }
+    end
+  end
+
+  private
+
+  def flush_cache
+    Rails.cache.delete('recipes')
+  end
 end

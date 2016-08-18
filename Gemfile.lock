@@ -38,8 +38,6 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    acts-as-taggable-on (4.0.0)
-      activerecord (>= 4.0)
     annotate (2.7.1)
       activerecord (>= 3.2, < 6.0)
       rake (>= 10.4, < 12.0)
@@ -65,6 +63,8 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.14)
+    friendly_id (5.1.0)
+      activerecord (>= 4.0.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -171,11 +171,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  acts-as-taggable-on (~> 4.0)
   annotate
   byebug
   coffee-rails (~> 4.2)
   devise
+  friendly_id (~> 5.1.0)
   jquery-rails
   listen (~> 3.0.5)
   pg (~> 0.18)

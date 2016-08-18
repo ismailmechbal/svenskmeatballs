@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+20.times {|i| Recipe.create!(
+    {name: "Recipe #{i + 1}"},
+    {description: "Description #{i + 1}"},
+    {cook_time: "cook_time #{i + 1}"},
+    {prep_time: "prep_time #{i + 1}"},
+    {ingredient: "ingredient #{i + 1}"},
+    {instruction: "instruction #{i + 1}"},
+    {image_url: "image_url #{i + 1}"}
+  )
+}

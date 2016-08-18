@@ -1,6 +1,13 @@
 <h1>All recipes</h1>
 <div>
-  <%= render @recipes %>
+  <% @recipes.each do |recipe| %>
+    <% cache recipe do %>
+      <% recipe.name %>
+    <% end %>
+  <% end %>
+  <% cache "recipes" do %>
+    <%= render @recipes, cached: true %>
+  <% end %>
 </div>
 <hr>
 <%= link_to "New recipe", new_recipe_path %>

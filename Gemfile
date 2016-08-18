@@ -12,10 +12,9 @@ gem 'turbolinks', '~> 5'
 #gem 'redis', '~> 3.0'
 
 # Custom
-
-gem 'acts-as-taggable-on', '~> 4.0'
 gem 'annotate'
 gem 'devise'
+gem 'friendly_id', '~> 5.1.0' # Need to install {https://github.com/norman/friendly_id}
 gem 'simple_form'
 
 group :development, :test do

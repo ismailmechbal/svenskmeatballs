@@ -2,7 +2,8 @@ class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
 
   def index
-    @recipes = Recipe.all.order(created_at: :desc)
+    #@recipes = Recipe.all.order(created_at: :desc)
+    @recipes = Recipe.all_cached
   end
 
   def show
@@ -47,6 +48,7 @@ class RecipesController < ApplicationController
 
   def set_recipe
     @recipe = Recipe.find(params[:id])
+    expire_fragment(@recipe)
   end
 
   def recipe_params
