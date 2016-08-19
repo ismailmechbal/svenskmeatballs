@@ -1,8 +1,8 @@
 <%= simple_form_for(@recipe, html: { class: 'form-vertical' }) do |f| %>
-  <%= f.input :name,
-              label: "Recipe Name",
-              error: 'Message is mandatory, please specify one',
-              autofocus: true %>
+    <%= f.input :name,
+                label: "Recipe Name",
+                error: 'Message is mandatory, please specify one',
+                autofocus: true %>
   <%= f.input :description,
               as: :text,
               label: 'Description',
@@ -29,6 +29,6 @@
               label: "Image Link",
               error: 'Image link is mandatory, please specify one' %>
 
-  <%= f.submit "Save Recipe", "data-disable-with"=> "Just a moment...", class: "btn waves-effect waves-light" %>
+  <%= f.submit "Save Recipe", "data-disable-with"=> "Just a moment...", class: "btn btn-primary" %>
 
 <% end %>
