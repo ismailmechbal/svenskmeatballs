@@ -6,13 +6,31 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-20.times {|i| Recipe.create!(
-    {name: "Recipe #{i + 1}"},
-    {description: "Description #{i + 1}"},
-    {cook_time: "cook_time #{i + 1}"},
-    {prep_time: "prep_time #{i + 1}"},
-    {ingredient: "ingredient #{i + 1}"},
-    {instruction: "instruction #{i + 1}"},
-    {image_url: "image_url #{i + 1}"}
-  )
-}
+1000.times do
+  email = Faker::Internet.email
+  password = Faker::Internet.password
+  User.create!(email:  email,
+               password: password,
+               password_confirmation: password)
+end
+
+Recipe.delete_all
+
+10000.times do
+  name = Faker::Lorem.sentence
+  description = Faker::Lorem.paragraph
+  cook_time = Faker::Number.between(1, 60)
+  prep_time = Faker::Number.between(1, 60)
+  ingredient = Faker::Lorem.paragraph
+  instruction = Faker::Lorem.paragraph
+  image_url = Faker::Placeholdit.image
+  user_id = Faker::Number.between(1, 999)
+  Recipe.create!(name:  name,
+               description: description,
+               cook_time: cook_time,
+               prep_time: prep_time,
+               ingredient: ingredient,
+               instruction: instruction,
+               image_url: image_url,
+               user_id: user_id)
+end

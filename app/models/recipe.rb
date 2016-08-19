@@ -34,7 +34,7 @@ class Recipe < ApplicationRecord
 
   class << self
     def all_cached
-      Rails.cache.fetch("recipes") { Recipe.all }
+      Rails.cache.fetch("recipes") { Recipe.limit(5) }
     end
   end
 

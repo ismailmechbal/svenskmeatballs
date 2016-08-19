@@ -1,5 +1,6 @@
 <% recipe.id %>
-<h3><%= link_to recipe.name, recipe_path(recipe.slug) %></h3>
+<h3><% link_to recipe.name, recipe_path(recipe.slug) %></h3>
+<h3><%= link_to recipe.name, recipe_path(recipe.id) %></h3>
 <% recipe.description %>
 <% recipe.cook_time %>
 <% recipe.prep_time %>

@@ -14,6 +14,7 @@ gem 'turbolinks', '~> 5'
 # Custom
 gem 'annotate'
 gem 'devise'
+gem 'faker', '~> 1.6', '>= 1.6.6'
 gem 'friendly_id', '~> 5.1.0'
 gem 'simple_form'
 
